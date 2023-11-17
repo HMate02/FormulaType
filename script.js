@@ -10,15 +10,6 @@ const mondatok = [
     "A hétvégét általában pénteki szabadedzések kezdik, melyek során a csapatok lehetőséget kapnak az autók beállításainak finomhangolására. A versenyzők itt gyakorolhatják a különböző típusú gumikat, tesztelhetik az autó teljesítményét és alkalmazkodhatnak a pálya különböző szakaszaihoz. A csapatok rendszeresen felhasználják a szabadedzéseket az új fejlesztések kipróbálására és az autók teljesítményének maximalizálására.",
     "A versenyen a versenyzők a kvalifikáción elért helyezésük szerint rajtolnak, kivéve, ha büntetést kaptak vagy változtattak az autójuk beállításain. A futamok meghatározott távolságúak, de időtartamuk a futam kezdetétől maximum 2 óra lehet. A versenyeken kötelező legalább egy kiállás, ahol a versenyzők friss gumikra cserélik a már elhasznált gumikat. Egy lassú kerékcsere súlyos másodpercekbe kerülhet az adott pilótának, ami nagyban befolyásolhatja a verseny alakulását.",
     "Az esős időjárásban történő autózás különleges kihívásokat jelent a versenyzőknek és a csapatoknak. Az esőben a pálya jellemzői megváltoznak, és a versenyzőknek alkalmazkodniuk kell az alacsonyabb tapadáshoz és a rosszabb láthatósághoz. Az esős versenyek még izgalmasabbá teszik a futamokat, mivel a nedves pálya elősegítheti a kiszámíthatatlan eseményeket. Az esős időjárásban az esőgumik alkalmazása és azok megfelelő kezelése kulcsfontosságú.",
-    /*"",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    */
 ];
 
 const iromezo = document.querySelector(".iromezo p");
