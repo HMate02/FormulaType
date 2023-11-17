@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', monospace;
+}
+
+body {
+    display: inline-flexbox;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1e1e1e;
+}
+
+h1 {
+    color: #fd4;
+}
+
+.formula-car {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paragrafus {
+    color: #646669;
+}
+
+.eredmenyek {
+    color: white;
+}
+
+::selection {
+    color: #fff;
+    background: #fd4;
+}
+
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 750px;
+    padding: 35px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
+}
+
+.wrapper .szovegdoboz {
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+.wrapper .content-box {
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 4px solid #fd4;
+}
+
+.content-box .iromezo {
+    overflow: hidden;
+    max-height: 256px;
+}
+
+.iromezo::-webkit-scrollbar {
+    width: 0;
+}
+
+.iromezo p {
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.iromezo p span {
+    position: relative;
+}
+
+.iromezo p span.helyes {
+    color: #d1d0c5;
+}
+
+.iromezo p span.helytelen {
+    color: red;
+    border-radius: 4px;
+}
+
+.iromezo p span.active::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background: #fd4;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+.content-box .content {
+    margin-top: 17px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid #fd4;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uj-jatek-button {
+    outline: none;
+    border: none;
+    width: 105px;
+    color: #fd4;
+    padding: 8px 0;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid #fd4;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+.uj-jatek-button:active {
+    transform: scale(0.89);
+}
+
+.uj-jatek-button:hover {
+    background: #fd4;
+    color: #1e1e1e;
+}
+
+.content .eredmenyek {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100%);
+    justify-content: space-between;
+}
+
+.eredmenyek li {
+    display: flex;
+    height: 20px;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+
+.eredmenyek li:not(:first-child) {
+    padding-left: 22px;
+    border-left: 2px solid #bfbfbf;
+}
+
+.eredmenyek li p {
+    font-size: 15px;
+}
+
+.eredmenyek li span {
+    display: block;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+li span b {
+    font-weight: 500;
+}
+
+li:not(:first-child) span {
+    font-weight: 500;
+}
+
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+  
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(-50%);
+}
+  
+.tooltip:hover::before {
+    opacity: 1;
+}
+
+@media (max-width: 745px) {
+    .wrapper {
+        padding: 20px;
+    }
+    
+    .content-box .content {
+        padding: 20px 0;
+    }
+
+    .content-box .iromezo {
+        max-height: 100%;
+    }
+
+    .iromezo p {
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .uj-jatek-button {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+
+    .content .eredmenyek {
+        width: 100%;
+    }
+
+    .eredmenyek li:not(:first-child) {
+        border-left: 0;
+        padding: 0;
+    }
+
+    .eredmenyek li p,
+    .eredmenyek li span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 518px) {
+    .wrapper .content-box {
+        padding: 10px 15px 0;
+    }
+
+    .iromezo p {
+        font-size: 13px;
+    }
+
+    .eredmenyek li {
+        margin-bottom: 10px;
+    }
+
+    .uj-jatek-button {
+        margin-top: 10px;
+    }
+}
