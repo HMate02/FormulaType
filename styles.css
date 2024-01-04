@@ -27,8 +27,56 @@ h1 {
 
 .header {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 60px;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-name {
+    text-decoration: none;
+}
+
+.kijelentkezes {
+    padding: 0 10px;
+}
+
+.profil-edit-link {
+    color: lightblue;
+    margin-right: 10px;
+}
+
+.kijelentkezes a button {
+    outline: none;
+    border: none;
+    width: 105px;
+    color: #fd4;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid #fd4;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+.kijelentkezes a button:active {
+    transform: scale(0.89);
+}
+
+.kijelentkezes a button:hover {
+    background: #fd4;
+    color: #1e1e1e;
 }
 
 .container {
